@@ -46,8 +46,7 @@ On the final hold-out fold alone, the tree-only models are slightly better (abou
 │   ├── step04_validate.py    # time-based validation, model comparison, tuning
 │   ├── step05_train_final.py # final fit on all labelled data
 │   ├── step06_predict.py     # writes the prediction files
-│   └── step08_make_report.py # optional: builds the Word report
-└── data/                     # NOT in the repo (see Setup)
+│
 ```
 
 ---
@@ -99,7 +98,6 @@ python src/step04_validate.py       # 4. time-based validation + model compariso
 python src/step05_train_final.py    # 5. train the final model on all Jan-Oct data
 python src/step06_predict.py        # 6. write validation_predictions.csv + fill December file
 python score.py --predictions validation_predictions.csv --december-predictions data/december_chart_inputs.csv
-python src/step08_make_report.py    # optional: report.docx
 ```
 
 On Windows you can use `py` instead of `python`.
@@ -116,7 +114,7 @@ On Windows you can use `py` instead of `python`.
 | `validation_predictions.csv` | step 6 | **Final predictions** (`load_id,predicted_rate`, 12,000 rows) |
 | `data/december_chart_inputs.csv` | step 6 | December rows with `predicted_rate` filled in |
 | `scorer_results/candidate_december.png` | `score.py` | **Fixed December chart** |
-| `report.docx` | step 8 | Optional Word report |
+
 
 All random seeds are fixed. Results may differ marginally between machines or library versions, mainly because near-tied hyper-parameter settings can be selected differently.
 
@@ -182,7 +180,3 @@ log(rate) = f_static(route, equipment, weight)  +  g_time(market signals, trend,
 
 ---
 
-## Development notes
-
-<!-- Edit or remove this section so it matches how you actually worked. -->
-Developed with AI assistance (Claude). I ran every step myself, reviewed the results, and can explain all the code.
