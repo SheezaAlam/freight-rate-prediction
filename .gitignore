@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.joblib
+data/processed/
+scorer_results/
