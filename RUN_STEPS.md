@@ -12,6 +12,5 @@ Run everything from the project root. Each step prints its own results - explain
 | 5 | `python src/step05_train_final.py` | Fits the chosen model on all Jan-Oct data | Final fit, learned market/trend coefficients |
 | 6 | `python src/step06_predict.py` | Writes `validation_predictions.csv` + fills December file | 12,000 predictions; how December inputs were completed |
 | 7 | `python score.py --predictions validation_predictions.csv --december-predictions data/december_chart_inputs.csv` | Official scorer, creates `scorer_results/candidate_december.png` | Show the chart |
-| 8 | `python src/step08_make_report.py` | Builds `report.docx` | The report deliverable |
 
 Code to walk through at the end: `src/step02_clean.py` (cleaning), `src/model.py` (model), `src/step04_validate.py` (split loop).
